@@ -432,7 +432,10 @@ MochaJUnitReporter.prototype.formatReportFilename = function(xml, testsuites) {
     reportFilename = reportFilename.replace('[suiteFilename]', testsuites[0].testsuite[0]._attr.file);
   }
   if (reportFilename.indexOf('[suiteName]') !== -1) {
-    reportFilename = reportFilename.replace('[suiteName]', testsuites[1].testsuite[0]._attr.name);
+    var filename = testsuites[0].testsuite[0]._attr.file
+    var n = filename.lastIndexOf('/');
+    var filename = filename.substring(n + 1);
+    reportFilename = reportFilename.replace('[suiteFilename]', filename);
   }
 
   return reportFilename;
