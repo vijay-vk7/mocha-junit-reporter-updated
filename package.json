@@ -1,6 +1,6 @@
 {
   "name": "mocha-junit-reporter-updated",
-  "version": "2.0.3",
+  "version": "2.0.5",
   "description": "A JUnit reporter for mocha.",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/vijay-vk7/mocha-junit-reporter-updated/tree/more-placeholders-in-report"
+    "url": "https://github.com/vijay-vk7/mocha-junit-reporter-updated/tree/master"
   },
   "keywords": [
     "mocha",
