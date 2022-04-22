@@ -429,13 +429,13 @@ MochaJUnitReporter.prototype.formatReportFilename = function(xml, testsuites) {
     reportFilename = reportFilename.replace('[rootSuiteTitle]', this._options.rootSuiteTitle);
   }
   if (reportFilename.indexOf('[suiteFilename]') !== -1) {
-    reportFilename = reportFilename.replace('[suiteFilename]', testsuites[0].testsuite[0]._attr.file);
-  }
-  if (reportFilename.indexOf('[suiteName]') !== -1) {
     var filename = testsuites[0].testsuite[0]._attr.file
     var n = filename.lastIndexOf('/');
     var filename = filename.substring(n + 1);
     reportFilename = reportFilename.replace('[suiteFilename]', filename);
+  }
+  if (reportFilename.indexOf('[suiteName]') !== -1) {
+    reportFilename = reportFilename.replace('[suiteName]', testsuites[1].testsuite[0]._attr.name);
   }
 
   return reportFilename;
